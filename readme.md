@@ -17,3 +17,20 @@ git pull
 git status				#查看有改动的文件
 ```
 
+## Failed to connect to github.com port 443:connection timed out
+
+如果我们在git push的时候遇到上面的问题，记得使用下面的命令把自己的代理加入git的配置当中。
+
+```shell
+# 加入代理
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+
+
+
+
+# 取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
